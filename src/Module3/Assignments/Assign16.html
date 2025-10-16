@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      img {
+        display: none;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+    <script>
+      function updateImage() {
+        const width = window.innerWidth;
+        const images = document.querySelectorAll("img");
+
+        images.forEach((img) => (img.style.display = "none"));
+
+        if (width < 500) {
+          document.getElementById("img1").style.display = "block";
+        } else if (width < 800) {
+          document.getElementById("img2").style.display = "block";
+        } else if (width < 1100) {
+          document.getElementById("img3").style.display = "block";
+        } else {
+          document.getElementById("img4").style.display = "block";
+        }
+      }
+
+      window.addEventListener("resize", updateImage);
+      window.addEventListener("load", updateImage);
+    </script>
+  </head>
+  <body>
+    <img id="img1" src="img1.jpg" alt="Image 1" />
+    <img id="img2" src="img2.jpg" alt="Image 2" />
+    <img id="img3" src="img3.jpg" alt="Image 3" />
+    <img id="img4" src="img4.jpg" alt="Image 4" />
+  </body>
+</html>

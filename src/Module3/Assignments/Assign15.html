@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function validatePassword() {
+        const password = document.getElementById("password").value;
+        const pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+        if (!pattern.test(password)) {
+          alert(
+            "Password must be 6–20 characters long and include at least one uppercase letter, one lowercase letter, and one digit."
+          );
+          document.getElementById("password").focus();
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return validatePassword()">
+      Password: <input type="password" id="password" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

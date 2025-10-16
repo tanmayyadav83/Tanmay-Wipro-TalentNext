@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Page with Iframes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-rows: 100px 1fr 60px;
+            grid-template-columns: 180px 1fr 180px;
+            grid-template-areas:
+                "header header header"
+                "logo login menu"
+                "footer footer footer";
+            height: 100vh;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        aside.logo {
+            grid-area: logo;
+        }
+
+        main {
+            grid-area: login;
+        }
+
+        aside.menu {
+            grid-area: menu;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        /* Optional border lines for clarity */
+        header, footer, main, aside {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<header><iframe src="header.html" title="Header"></iframe></header>
+<aside class="logo"><iframe src="logo.html" title="Logo"></iframe></aside>
+<main><iframe src="login.html" title="Login"></iframe></main>
+<aside class="menu"><iframe src="menu.html" title="Menu"></iframe></aside>
+<footer><iframe src="footer.html" title="Footer"></iframe></footer>
+</body>
+</html>

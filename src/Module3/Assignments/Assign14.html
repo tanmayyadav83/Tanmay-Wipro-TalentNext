@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function validateForm(event) {
+        const memberNumber = document.getElementById("memberNumber");
+        const password = document.getElementById("password");
+
+        // Validate Member Number
+        if (memberNumber.value.trim() === "") {
+          alert("Member number must be entered.");
+          memberNumber.focus();
+          event.preventDefault();
+          return false;
+        }
+        if (isNaN(memberNumber.value)) {
+          alert("Member number must be a number.");
+          memberNumber.focus();
+          event.preventDefault();
+          return false;
+        }
+
+        // Validate Password
+        if (password.value.trim() === "") {
+          alert("Password must be entered.");
+          password.focus();
+          event.preventDefault();
+          return false;
+        }
+        if (password.value.length <= 4) {
+          alert("Password must be longer than 4 characters.");
+          password.focus();
+          event.preventDefault();
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return validateForm(event)">
+      Member Number: <input type="text" id="memberNumber" /><br /><br />
+      Password: <input type="password" id="password" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

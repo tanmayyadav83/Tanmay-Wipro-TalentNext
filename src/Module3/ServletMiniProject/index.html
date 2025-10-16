@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Login Module</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+      }
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form action="login" method="post">
+        <label>Username<br /><input name="username" required /></label>
+        <label
+          >Password<br /><input type="password" name="password" required
+        /></label>
+        <button type="submit">Login</button>
+      </form>
+
+      <p>
+        <a href="register.jsp">New user? Register</a> |
+        <a href="change-password.jsp">Change password</a>
+      </p>
+
+      <div style="color: red">${param.error}</div>
+    </div>
+  </body>
+</html>

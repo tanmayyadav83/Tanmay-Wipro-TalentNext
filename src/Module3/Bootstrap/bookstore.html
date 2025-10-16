@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Book Store - Welcome</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      /* Promotion Banner */
+      .promo-banner {
+        background-color: #f5c1de;
+        text-align: center;
+        padding: 25px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .promo-banner img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+
+      .promo-banner h1 {
+        font-size: 1.8rem;
+        color: #333;
+        text-transform: capitalize;
+        margin: 0;
+      }
+
+      /* Toolbar */
+      .toolbar {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 800px;
+      }
+
+      .toolbar button img {
+        width: 18px;
+        height: 18px;
+        margin-right: 6px;
+      }
+
+      /* Books */
+      .book-card img {
+        border-radius: 8px;
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      .book-card p {
+        margin-top: 8px;
+        font-size: 0.95rem;
+        color: #333;
+      }
+
+      .book-card b {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Promotion Banner -->
+    <div class="promo-banner">
+      <img src="logo.png" alt="Logo" />
+      <h1>Your Route To Success - Upto 40% Off On SBI Exam Books</h1>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="container toolbar text-center">
+      <div class="row align-items-center justify-content-center g-2">
+        <div class="col-md-3 col-12">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search books..."
+          />
+        </div>
+        <div class="col-md-auto col-12">
+          <button class="btn btn-primary m-1">
+            <img src="search.png" alt="" /> Search
+          </button>
+          <button class="btn btn-success m-1">
+            <img src="download.png" alt="" /> Download
+          </button>
+          <button class="btn btn-warning m-1">
+            <img src="print.png" alt="" /> Print
+          </button>
+          <button class="btn btn-danger m-1">
+            <img src="favorite.png" alt="" /> Favorite
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Books Grid -->
+    <div class="container my-5">
+      <div class="row g-4">
+        <!-- Row 1 -->
+        <div class="col-md-2 col-6 book-card">
+          <img src="book1.jpg" alt="Book 1" />
+          <p><b>Java Basics</b>by John Doe</p>
+        </div>
+        <div class="col-md-2 col-6 book-card">
+          <img src="book2.jpg" alt="Book 2" />
+          <p><b>Learning Python</b>by Alice Smith</p>
+        </div>
+        <div class="col-md-2 col-6 book-card">
+          <img src="book3.jpg" alt="Book 3" />
+          <p><b>Web Dev 101</b>by Mark Lee</p>
+        </div>
+        <div class="col-md-2 col-6 book-card">
+          <img src="book4.jpg" alt="Book 4" />
+          <p><b>Data Structures</b>by Brian Cox</p>
+        </div>
+        <div class="col-md-2 col-6 book-card">
+          <img src="book5.jpg" alt="Book 5" />
+          <p><b>Database Design</b>by Clara Jones</p>
+        </div>
+        <div class="col-md-2 col-6 book-card">
+          <img src="book6.jpg" alt="Book 6" />
+          <p><b>Cloud Computing</b>by Kevin White</p>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-4">
+        <!-- Row 2 -->
+        <div class="col-md-2 col-6 book-card">
+          <img src="book7.jpg" alt="Book 7" />
+          <p><b>HTML & CSS</b>by Sarah Paul</p>
+        </div>
+        <div class="col-md-2 col-6 book-card">
+          <img src="book8.jpg" alt="Book 8" />
+          <p><b>JavaScript Essentials</b>by Mike Ross</p>
+        </div>
+        <div class="col-md-2 col-6 book-card">
+          <img src="book9.jpg" alt="Book 9" />
+          <p><b>Machine Learning</b>by Emma Gray</p>
+        </div>
+        <div class="col-md-2 col-6 book-card">
+          <img src="book10.jpg" alt="Book 10" />
+          <p><b>React Development</b>by Alex Kim</p>
+        </div>
+        <div class="col-md-2 col-6 book-card">
+          <img src="book11.jpg" alt="Book 11" />
+          <p><b>Networking Basics</b>by Lisa Wong</p>
+        </div>
+        <div class="col-md-2 col-6 book-card">
+          <img src="book12.jpg" alt="Book 12" />
+          <p><b>Cyber Security</b>by Tom Allen</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
